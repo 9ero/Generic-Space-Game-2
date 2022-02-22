@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/level/music/Common Fight.ogg" type="AudioStream" id=1]
+[ext_resource path="res://assets/level/sprites/desert-backgorund.png" type="Texture" id=2]
+[ext_resource path="res://assets/level/sprites/clouds.png" type="Texture" id=3]
+[ext_resource path="res://assets/level/LevelController.gd" type="Script" id=4]
+[ext_resource path="res://assets/player/Player.tscn" type="PackedScene" id=5]
+
+[node name="Level" type="Node2D" groups=["Level"]]
+script = ExtResource( 4 )
+
+[node name="BgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -12.0
+
+[node name="Background" type="ParallaxBackground" parent="."]
+offset = Vector2( 120, 0 )
+transform = Transform2D( 1, 0, 0, 1, 120, 0 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+motion_mirroring = Vector2( 0, 272 )
+
+[node name="Sprite" type="Sprite" parent="Background/ParallaxLayer"]
+position = Vector2( 9, 137 )
+texture = ExtResource( 2 )
+
+[node name="Clouds_1" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Clouds_1"]
+motion_mirroring = Vector2( 0, 272 )
+
+[node name="Sprite" type="Sprite" parent="Clouds_1/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.313726 )
+position = Vector2( 127, 57 )
+texture = ExtResource( 3 )
+
+[node name="Clounds_2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Clounds_2"]
+motion_mirroring = Vector2( 0, 272 )
+
+[node name="Sprite" type="Sprite" parent="Clounds_2/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.470588 )
+position = Vector2( 129, 184 )
+texture = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 78, 224 )
