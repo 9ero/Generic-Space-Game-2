@@ -23,7 +23,7 @@ func _input(event):
 		shoot_controller()
 
 func get_axis() -> Vector2:
-	var axis= Vector2.ZERO
+	var axis= Vector2.ZERO #same to Vector2(0,0)
 	axis.x = int(Input.is_action_pressed("ui_right"))- int(Input.is_action_pressed("ui_left"))
 	axis.y = int(Input.is_action_pressed("ui_down"))- int(Input.is_action_pressed("ui_up"))
 	return axis

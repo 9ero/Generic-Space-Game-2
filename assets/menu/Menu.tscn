@@ -54,7 +54,7 @@ __meta__ = {
 
 [node name="MidJuan" type="Label" parent="VBoxContainer"]
 margin_right = 144.0
-margin_bottom = 14.0
+margin_bottom = 10.0
 custom_colors/font_color = Color( 0.984314, 0.996078, 0.752941, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "Generic"
@@ -62,27 +62,27 @@ align = 1
 valign = 1
 
 [node name="Generic Space ship" type="Label" parent="VBoxContainer"]
-margin_top = 18.0
+margin_top = 14.0
 margin_right = 144.0
-margin_bottom = 45.0
+margin_bottom = 42.0
 custom_fonts/font = ExtResource( 5 )
 text = "Space Ship"
 align = 1
 valign = 1
 
 [node name="Start" type="Button" parent="VBoxContainer"]
-margin_top = 49.0
+margin_top = 46.0
 margin_right = 144.0
-margin_bottom = 80.0
+margin_bottom = 77.0
 custom_colors/font_color_hover = Color( 0.984314, 0.996078, 0.752941, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Start"
 flat = true
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
-margin_top = 84.0
+margin_top = 81.0
 margin_right = 144.0
-margin_bottom = 103.0
+margin_bottom = 100.0
 custom_colors/font_color_hover = Color( 0.984314, 0.996078, 0.752941, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "Exit"
@@ -105,7 +105,7 @@ margin_top = 15.0
 margin_right = 140.0
 margin_bottom = 25.0
 custom_fonts/font = SubResource( 5 )
-text = "Develop by MINDJUAN Games"
+text = "Develop by Juan Fernandez"
 align = 1
 valign = 1
 

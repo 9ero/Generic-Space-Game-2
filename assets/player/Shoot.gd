@@ -2,7 +2,7 @@ extends Area2D
 
 onready var player: KinematicBody2D = get_tree().get_nodes_in_group("Player")[0]
 
-const SPEED=100
+const SPEED=180
 
 
 func _ready():
@@ -14,8 +14,10 @@ func _process(delta):
 	position.y -= SPEED * delta
 
 func _on_Shoot_area_entered(area):
-	if(area.is_in_group("Enemy")):
+	if(area.is_in_group("enemy")):
+		
 		queue_free()
+		
 
 
 func _on_VisibilityNotifier2D_screen_exited():
